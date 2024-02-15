@@ -23,10 +23,11 @@ public class PersonServiceImpl implements PersonService {
         try {
             log.info("Test No.16");
             if (CollectionUtils.isEmpty(people)) {
+                log.info("[Error] invalid request.");
                 throw new PersonServiceException(
                         HttpStatus.BAD_REQUEST,
                         PersonErrorCode.BAD_REQUEST,
-                        "Argument people not found. ");
+                        "Argument people not found.");
             }
 
             // Sort list of people with firstname and lastname
@@ -50,10 +51,11 @@ public class PersonServiceImpl implements PersonService {
         try {
             log.info("Test No.17");
             if (CollectionUtils.isEmpty(people)) {
+                log.info("[Error] invalid request.");
                 throw new PersonServiceException(
                         HttpStatus.BAD_REQUEST,
                         PersonErrorCode.BAD_REQUEST,
-                        "Argument people not found. ");
+                        "Argument people not found.");
             }
 
             // Group list of people by gender condition
@@ -79,10 +81,11 @@ public class PersonServiceImpl implements PersonService {
         try {
             log.info("Test No.18");
             if (CollectionUtils.isEmpty(people) || age == null) {
+                log.info("[Error] invalid request.");
                 throw new PersonServiceException(
                         HttpStatus.BAD_REQUEST,
                         PersonErrorCode.BAD_REQUEST,
-                        "Argument people not found. ");
+                        "Argument people or age not found.");
             }
 
             // Filter people that equal and older than 30 yrs
