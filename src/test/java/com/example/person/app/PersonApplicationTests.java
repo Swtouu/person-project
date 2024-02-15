@@ -1,4 +1,4 @@
-package com.example.person;
+package com.example.person.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class PersonApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void test_main() {
+//		PersonApplication.main(null);
 	}
 
 }
